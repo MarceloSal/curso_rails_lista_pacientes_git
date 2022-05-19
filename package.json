@@ -1,0 +1,13 @@
+{
+  "name": "List",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.1.0",
+    "jquery": "^3.6.0",
+    "popper.js": "1.14.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "MarceloSal <salmeron.marcelo@gmail.com>",
+  "license": "MIT"
+}

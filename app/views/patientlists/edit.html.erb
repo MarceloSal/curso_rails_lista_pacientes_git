@@ -1,0 +1,6 @@
+<h1><%= t('edit') %></h1>
+
+<%= render 'form', patientlist: @patientlist %>
+
+<%= link_to t('links.show'), @patientlist, class:"btn btn-primary" %> |
+<%= link_to t('links.back'), patientlists_path, class:"btn btn-primary" %>

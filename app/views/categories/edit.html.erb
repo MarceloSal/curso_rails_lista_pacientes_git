@@ -1,0 +1,6 @@
+<h1><%= t('edit') %></h1>
+
+<%= render 'form', category: @category %>
+
+<%= link_to t('links.show'), @category, class:"btn btn-primary" %> |
+<%= link_to t('links.back'), categories_path, class:"btn btn-primary" %>

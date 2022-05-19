@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Category.model_name.human(count:@categories.count) %></h1>
+
+<table class= "table table-hover">
+  <thead>
+    <tr>
+      <th><%= @categories.human_attribute_name(:description) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.description %></td>
+        <td><%= link_to t('links.show'), category %></td>
+        <td><%= link_to t('links.edit'), edit_category_path(category) %></td>
+        <td><%= link_to t('links.destroy'), category, method: :delete, data: { confirm: t('confirm_msg') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('links.new category'), new_category_path, class:"btn btn-primary" %>

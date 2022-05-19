@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @patientlist.class.human_attribute_name(:register_name) %>
+    <%= text_field_tag nil, @patientlist.register_name, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="-group">
+    <%= label_tag nil, @patientlist.class.human_attribute_name(:email) %>
+    <%= text_field_tag nil, @patientlist.email, class:"form-control", disabled: true %>
+  </div>
+  <br>
+  <div class="-group">
+    <%= label_tag nil, @patientlist.class.human_attribute_name(:category) %>
+    <%= text_field_tag nil, @patientlist.category.description, class:"form-control", disabled: true %>
+  </div>
+</form>
+<br>
+
+<%= link_to t('links.edit'), edit_patientlist_path(@patientlist), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), patientlists_path, class:"btn btn-primary" %>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @category.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @category.description, class:"form-control", disabled: true %>
+  </div>
+</form>
+<br>
+
+<%= link_to t('links.edit'), edit_category_path(@category), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), categories_path, class:"btn btn-primary" %>

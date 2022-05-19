@@ -1,0 +1,34 @@
+<%= form_with(model: patientlist, local: true) do |form| %>
+  <% if patientlist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patientlist.errors.count, "error") %> prohibited this patientlist from being saved:</h2>
+
+      <ul>
+      <% patientlist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :register_name %>
+    <%= form.text_field :register_name, class:"form-control", placeholder:"Digite aqui seu nome" %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, type:"email", class:"form-control", placeholder:"Enter email" %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :category_id %>
+    <%= form.select("category_id", @category_options, { include_blank: t('select')},class:"form-control") %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, class:"btn btn-primary" %>
+  </div>
+<% end %>
+
+<br>

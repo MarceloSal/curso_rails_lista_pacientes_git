@@ -1,0 +1,23 @@
+'pt-BR':
+  activerecord:
+    models:
+      patientlist: 
+        one: Registro do paciente
+        other: Registro de pacientes
+      category: 
+        one: Categoria do paciente
+        other: Categoria dos pacientes
+    attributes:
+      patientlist:
+        id: código
+        register_name: Nome
+        email: Email
+        category: Categoria do paciente
+        category_id: Categoria
+        created_at: Criado em
+        updated_at: Atualizado em
+      category:
+        id: código
+        description: Descrição 
+        created_at: Criado em
+        updated_at: Atualizado em
